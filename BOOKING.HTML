@@ -27,66 +27,72 @@
             <p class="subtitle" style="text-align: center;">Tell us about your car and what you'd like done. We'll confirm your slot by phone or email within 24 hours.</p>
             <div class="divider" aria-hidden="true" style="margin-left: auto; margin-right: auto;"></div>
         </section>
+<section class="booking-form" aria-labelledby="booking-heading">
+    <h3 id="booking-heading">Appointment Details</h3>
+    <form id="bookingForm" novalidate>
+        <!-- Web3Forms Access Key (Paste your actual key inside value) -->
+        <input type="hidden" name="access_key" value="PASTE_YOUR_ACCESS_KEY_HERE">
+        
+        <!-- Email customization -->
+        <input type="hidden" name="subject" value="New Appointment Booking - Sparkle Care">
+        <input type="hidden" name="from_name" value="Sparkle Care Booking System">
 
-        <section class="booking-form" aria-labelledby="booking-heading">
-            <h3 id="booking-heading">Appointment Details</h3>
-            <form id="bookingForm" action="#" method="post" novalidate>
-                <div class="form-grid">
-                    <div class="field field-full">
-                        <label for="name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" autocomplete="name" required>
-                    </div>
-
-                    <div class="field">
-                        <label for="phone">Phone Number <span class="required">*</span></label>
-                        <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9+\-\s]{7,15}" required>
-                    </div>
-
-                    <div class="field">
-                        <label for="email">Email <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" autocomplete="email" required>
-                    </div>
-
-                    <div class="field">
-                        <label for="service">Service <span class="required">*</span></label>
-                        <select id="service" name="service" required>
-                            <option value="ppf">Paint Protection Film</option>
-                            <option value="ceramic">Ceramic Coating</option>
-                            <option value="graphene">Graphene Coating</option>
-                        </select>
-                    </div>
-
-                    <div class="field">
-                        <label for="car">Car Make &amp; Model</label>
-                        <input type="text" id="car" name="car" placeholder="e.g. Hyundai Creta">
-                    </div>
-
-                    <div class="field">
-                        <label for="date">Preferred Date <span class="required">*</span></label>
-                        <input type="date" id="date" name="date" required>
-                    </div>
-
-                    <div class="field">
-                        <label for="time">Preferred Time <span class="required">*</span></label>
-                        <input type="time" id="time" name="time" required>
-                    </div>
-
-                    <div class="field field-full">
-                        <label for="notes">Additional Notes</label>
-                        <textarea id="notes" name="notes" rows="4" placeholder="Anything we should know before you arrive?"></textarea>
-                        <p class="hint">Optional — scratches, prior work, drop-off preferences, etc.</p>
-                    </div>
-
-                    <div class="field field-full">
-                        <button type="submit">Confirm Booking</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="form-status" id="formStatus" role="status" aria-live="polite">
-                Thanks! Your request has been noted — we'll confirm your appointment shortly.
+        <div class="form-grid">
+            <div class="field field-full">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
             </div>
-        </section>
+
+            <div class="field">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9+\-\s]{7,15}" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+                <label for="service">Service <span class="required">*</span></label>
+                <select id="service" name="service" required>
+                    <option value="ppf">Paint Protection Film</option>
+                    <option value="ceramic">Ceramic Coating</option>
+                    <option value="graphene">Graphene Coating</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="car">Car Make &amp; Model</label>
+                <input type="text" id="car" name="car" placeholder="e.g. Hyundai Creta">
+            </div>
+
+            <div class="field">
+                <label for="date">Preferred Date <span class="required">*</span></label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="field">
+                <label for="time">Preferred Time <span class="required">*</span></label>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <div class="field field-full">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Anything we should know before you arrive?"></textarea>
+                <p class="hint">Optional — scratches, prior work, drop-off preferences, etc.</p>
+            </div>
+
+            <div class="field field-full">
+                <button type="submit" id="submitBtn">Confirm Booking</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="form-status" id="formStatus" role="status" aria-live="polite">
+        Thanks! Your request has been sent — we'll confirm your appointment shortly.
+    </div>
+</section>
 
         <section class="location-contact" aria-labelledby="help-heading">
             <h3 id="help-heading">Need Help?</h3>
