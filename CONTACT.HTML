@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Sparkle Care PPF</title>
+    <meta name="description" content="Get in touch with Sparkle Care PPF for paint protection film, ceramic and graphene coating enquiries.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <NAV>
+        <UL><a href="home.html" class="logo" aria-label="Sparkle Care home page">
+        <img src="logo.jpg" alt="Sparkle Care logo " class="logoheader">
+            <LI><A HREF="HOME.HTML">Home</A></LI>
+            <LI><A HREF="about.html">About Us</A></LI>
+            <LI><A HREF="SERVICES.HTML">Services</A></LI>
+            <LI><A HREF="CONTACT.HTML">Contact Us</A></LI>
+        </UL>
+    </NAV>
+
+    <main>
+        <section class="hero">
+            <p class="eyebrow">Sparkle Care PPF</p>
+            <h2>Get In</h2>
+            <h1>Touch</h1>
+            <p class="subtitle" style="text-align: center;">Questions about a service, a quote, or your booking? Reach out and we'll get back to you within 24 hours.</p>
+            <div class="divider" aria-hidden="true" style="margin-left: auto; margin-right: auto;"></div>
+        </section>
+
+        <section class="location-contact" aria-labelledby="visit-heading">
+            <h3 id="visit-heading">Visit Us</h3>
+            <p>In front of Tata Jaika Motors, near Jaika Petrol Pump,<br>Badnera Road, Sai Nagar, Amravati &ndash; 444607, Maharashtra</p>
+            <div class="action-buttons">
+                <a href="https://maps.app.goo.gl/7gxmFKxPHJiSiq5g8" target="_blank" rel="noopener noreferrer">
+                    <button type="button">Get Directions</button>
+                </a>
+                <a href="https://www.instagram.com/sparklecare.amravati/" target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="secondary">Instagram</button>
+                </a>
+                <a href="BOOKING.HTML">
+                    <button type="button" class="secondary">Book an Appointment</button>
+                </a>
+            </div>
+        </section>
+
+        <section class="booking-form" aria-labelledby="contact-heading">
+            <h3 id="contact-heading">Send a Message</h3>
+            <form id="contactForm" action="#" method="post" novalidate>
+                <div class="form-grid">
+                    <div class="field field-full">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9+\-\s]{7,15}" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="field field-full">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Enquiry</option>
+                            <option value="ppf">Paint Protection Film</option>
+                            <option value="ceramic">Ceramic Coating</option>
+                            <option value="graphene">Graphene Coating</option>
+                            <option value="booking">Existing Booking</option>
+                        </select>
+                    </div>
+
+                    <div class="field field-full">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="4" required placeholder="How can we help?"></textarea>
+                    </div>
+
+                    <div class="field field-full">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="form-status" id="formStatus" role="status" aria-live="polite">
+                Thanks for reaching out — we'll get back to you shortly.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; <span id="year"></span> Sparkle Care PPF. All rights reserved.
+    </footer>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            status.classList.add('visible');
+            form.reset();
+            status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

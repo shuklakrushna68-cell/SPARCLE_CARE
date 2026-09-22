@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <NAV>
+        <UL>
+            <LI><A HREF="HOME.HTML">Home</A></LI>
+            <LI><A HREF="ABOUT.HTML">About Us</A></LI>
+            <LI><A HREF="SERVICES.HTML">Services</A></LI>
+            <LI><A HREF="CONTACT.HTML">Contact Us</A></LI>
+        </UL>
+        
+    </NAV>
+
+    <DIV>
+        <H2>BOOK YOUR</H2>
+        <h1>APPOINTMENT</h1>
+    </DIV>
+
+    <div class="booking-form">
+        <h3>APPOINTMENT DETAILS</h3>
+        <form action="#" method="post">
+            <label for="name">Full Name</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="phone">Phone Number</label><br>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="service">Service</label><br>
+            <select id="service" name="service">
+                <option value="ppf">PPF</option>
+                <option value="ceramic">Ceramic Coating</option>
+                <option value="graphene">Graphene Coating</option>
+            </select><br><br>
+
+            <label for="car">Car Make &amp; Model</label><br>
+            <input type="text" id="car" name="car"><br><br>
+
+            <label for="date">Preferred Date</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="time">Preferred Time</label><br>
+            <input type="time" id="time" name="time" required><br><br>
+
+            <label for="notes">Additional Notes</label><br>
+            <textarea id="notes" name="notes" rows="4"></textarea><br><br>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </div>
+
+    <div class="location-contact">
+        <h3>NEED HELP?</h3>
+        <p>Find us on the map or reach out to our team directly.</p>
+        <div class="action-buttons">
+            <a href="https://maps.app.goo.gl/ZLuhPe7fpBozdvJm6" target="_blank">
+                <button type="button">Get Directions</button>
+            </a>
+            <a href="CONTACT.HTML">
+                <button type="button">Contact Us</button>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
