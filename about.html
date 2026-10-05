@@ -3,82 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Sparkle Care</title>
-    <link rel="stylesheet" href="home.css">
+    <title>About Us - Sparkle Care Detailing Studio</title>
+    <link rel="stylesheet" href="home1.css">
 </head>
 <body>
+  <!-- Clean Consolidated Header -->
   <header>
-     <NAV>
-        <UL><a href="home.html" class="logo" aria-label="Sparkle Care home page">
-        <img src="logo.jpg" alt="Sparkle Care logo " class="logoheader">
-            <LI><A HREF="index.html">Home</A></LI>
-            <LI><A HREF="about.html">About Us</A></LI>
-            <LI><A HREF="services.html">Services</A></LI>
-            <LI><A HREF="CONTACT.HTML">Contact Us</A></LI>
-        </UL>
-         <button ><a href="BOOKING.HTML">Book an Appointment</a></button>
-    </NAV>
-
-    <nav class="container" aria-label="Main navigation">
-     
-      <ul class="nav-links">
-        <li><a href="#story">Our story</a></li>
-        <li><a href="#values">Our values</a></li>
-        <li><a class="nav-button" href="#contact">Get in touch</a></li>
+    <nav>
+      <a href="index.html" class="logo" aria-label="Sparkle Care home page">
+        <img src="logo.jpg" alt="Sparkle Care logo" class="logoheader">
+      </a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="CONTACT.HTML">Contact Us</a></li>
       </ul>
+      <button><a href="BOOKING.HTML">Book Studio Visit</a></button>
     </nav>
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Care with a little more heart</p>
-          <h1>Helping life feel a little brighter.</h1>
-          <p>At Sparkle Care, we believe everyone deserves thoughtful support, meaningful connection, and the confidence to enjoy every day.</p>
-        </div>
-        <div class="hero-art" aria-label="Decorative illustration of a heart">
-          <div class="sun"></div>
-          <div class="heart" aria-hidden="true">♥</div>
-        </div>
+      <p class="eyebrow">Precision Automotive Studio</p>
+      <h1>Craftsmanship. Protection. Perfection.</h1>
+      <p class="subtitle">At Sparkle Care, we engineer show-car depth and multi-year surface protection for drivers who demand the very best for their machines.</p>
+      <div class="divider"></div>
+    </section>
+
+    <!-- Story Blocks Section -->
+    <section id="story" class="story-section">
+      <div class="section-header">
+        <p class="eyebrow">Our Journey</p>
+        <h2>The Sparkle Care Story</h2>
+        <p class="section-subtitle">How a passion for immaculate finishes grew into an elite detailing facility.</p>
+      </div>
+
+      <div class="story-grid">
+        <!-- Story Block 1 -->
+        <article class="story-block">
+          <div class="story-badge">Chapter 01</div>
+          <h3>The Pursuit of Gloss</h3>
+          <p>Sparkle Care started with an obsession: eliminating swirl marks, holograms, and oxidation that factory-fresh clear coats fall victim to. We believed car care shouldn't be a quick wash—it should be a meticulous restorative art.</p>
+        </article>
+
+        <!-- Story Block 2 -->
+        <article class="story-block highlight">
+          <div class="story-badge">Chapter 02</div>
+          <h3>Mastering Modern Armor</h3>
+          <p>As paint technology evolved, so did we. We invested in dust-controlled bay setups, high-CRI inspection lighting, and certified installation workflows for self-healing Paint Protection Films (PPF) and 10H ceramic coatings.</p>
+        </article>
+
+        <!-- Story Block 3 -->
+        <article class="story-block">
+          <div class="story-badge">Chapter 03</div>
+          <h3>Setting the Standard</h3>
+          <p>Today, every vehicle entering our studio receives surgical prep, multi-stage rotary compounding, and precision film edges tucked to near-invisibility. We treat every machine like a showpiece.</p>
+        </article>
       </div>
     </section>
 
-    <section id="story">
-      <div class="container intro">
-        <div>
-          <p class="eyebrow">Who we are</p>
-          <h2>Care that sees the whole person.</h2>
-        </div>
-        <div class="intro-copy">
-          <p>We started Sparkle Care with a simple idea: care should feel personal, empowering, and full of possibility. Our friendly team works alongside individuals and families to create support that fits real life.</p>
-          <p>From practical assistance to a listening ear, we bring patience, respect, and a positive spirit to everything we do. Because the small moments of care can make the biggest difference.</p>
-        </div>
+    <!-- Core Values Section -->
+    <section class="values-section" id="values">
+      <div class="section-header">
+        <p class="eyebrow">What Guides Us</p>
+        <h2>Studio Standards</h2>
+      </div>
+
+      <div class="values-grid">
+        <article class="value-card">
+          <div class="value-icon">✦</div>
+          <h3>Zero Shortcuts</h3>
+          <p>Every inch of paint is measured with digital thickness gauges and decontaminated before compounding begins.</p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon">🛡</div>
+          <h3>Guaranteed Protection</h3>
+          <p>We only install proven hydrophobic coatings and self-healing TPU films backed by comprehensive warranties.</p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon">⚙</div>
+          <h3>Enthusiast Care</h3>
+          <p>From track-day weapons to daily drivers, we handle every panel with clean microfibers, pure deionized water, and respect.</p>
+        </article>
       </div>
     </section>
 
-    <section class="values" id="values">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">What guides us</p><h2>Our values</h2></div>
-        <div class="cards">
-          <article class="card"><div class="icon" aria-hidden="true">✦</div><h3>Compassion first</h3><p>We lead with empathy, kindness, and genuine care in every interaction.</p></article>
-          <article class="card"><div class="icon" aria-hidden="true">♡</div><h3>People powered</h3><p>Your goals, choices, and voice are at the center of every care plan.</p></article>
-          <article class="card"><div class="icon" aria-hidden="true">☀</div><h3>Bring the joy</h3><p>We celebrate progress, encourage independence, and find brightness in each day.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="quote">
-      <div class="container">
-        <blockquote>“Great care is more than a service. It is a relationship built on trust, respect, and a shared belief in what is possible.”</blockquote>
-        <cite>— The Sparkle Care team</cite>
-      </div>
+    <!-- Quote Banner -->
+    <section class="quote-banner">
+      <blockquote>
+        “True detailing is not about covering flaws—it is about restoring flawless clarity beneath the light.”
+      </blockquote>
+      <cite>— The Sparkle Care Team</cite>
     </section>
   </main>
 
   <footer id="contact">
-    <div class="container footer-content">
-      <p><strong>SparkleCare</strong> — making every day brighter.</p>
+    <div>
+      <p><strong>Sparkle Care</strong> — Precision Automotive Detailing & Surface Protection.</p>
       <a href="mailto:hello@sparklecare.example">hello@sparklecare.example</a>
     </div>
   </footer>
