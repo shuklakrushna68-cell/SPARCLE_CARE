@@ -1,0 +1,608 @@
+/* ==========================================================================
+   SPARKLE CARE - UNIFIED MASTER STYLESHEET
+   Supports: index.html, about.html, services.html, booking.html, contact.html
+   ========================================================================== */
+
+/* ===== General Reset & Base Setup ===== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    color: #e2e8f0; 
+    min-height: 100vh;
+    position: relative;
+    background: #000000; 
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Deep black background with subtle crimson ambient lighting */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(211, 16, 16, 0.18), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(211, 16, 16, 0.06), transparent 50%),
+        linear-gradient(160deg, #050505 0%, #0a0a0a 60%, #000000 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4 {
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.02em;
+    text-align: center;
+    margin: 10px 0;
+}
+
+h1, h2 { 
+    color: #ffffff; 
+}
+
+h3 { 
+    color: #d31010; /* Sparkle Care Crimson Red */
+}
+
+p {
+    color: #cbd5e1;
+    margin: 0 0 14px;
+}
+
+/* ===== Logos & Header Bar ===== */
+.logo-header {
+    text-align: center;
+    padding: 20px 20px 10px;
+    background: #000000;
+}
+
+.main-logo {
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#logo {
+    height: 44px;
+    width: auto;
+    display: block;
+}
+
+.logoheader, #logoheader {
+    height: 44px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* ===== Universal Navigation Bar ===== */
+nav {
+    background: rgba(10, 10, 10, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav ul li { 
+    margin: 0; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e2e8f0;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 13.5px;
+    padding: 6px 0;
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+nav ul li a:hover { 
+    color: #d31010; 
+}
+
+nav button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: #d31010;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav button a { 
+    color: #ffffff; 
+    text-decoration: none; 
+}
+
+nav button:hover { 
+    background-color: #ff1a1a; 
+    transform: translateY(-1px); 
+    box-shadow: 0 4px 12px rgba(211, 16, 16, 0.4); 
+}
+
+/* ===== Universal Hero Section ===== */
+.hero {
+    text-align: center;
+    padding: 50px 20px 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    color: #d31010;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.subtitle {
+    max-width: 600px;
+    margin: 12px auto 0;
+    color: #94a3b8;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background: #d31010;
+    border-radius: 2px;
+    margin: 20px auto 0;
+}
+
+/* ===== Shared Container Cards (Home, Services, Contact, Reviews) ===== */
+.services, .reviews, .booking-form, .location-contact, .instagram {
+    margin: 32px auto;
+    padding: 38px;
+    max-width: 920px;
+    text-align: center;
+    background: rgba(15, 15, 18, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== Services Table & Cards ===== */
+table {
+    width: 100%;
+    margin: 20px auto 0;
+    border-collapse: separate;
+    border-spacing: 16px;
+    text-align: center;
+}
+
+table td {
+    padding: 28px 24px;
+    border-radius: 14px;
+    background: rgba(25, 25, 28, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    max-width: 300px;
+    vertical-align: top;
+    transition: all 0.3s ease;
+}
+
+table td:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(211, 16, 16, 0.2);
+    background: rgba(30, 30, 35, 0.9);
+    border-color: rgba(211, 16, 16, 0.5);
+}
+
+table h3 {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: 1.15rem;
+}
+
+table p {
+    font-size: 14px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* ===== Featured Media & Reels ===== */
+.featured-reel {
+    max-width: 450px;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    margin: 0 auto;
+    display: block;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+/* ===== About Page: Story Blocks & Studio Standards ===== */
+.story-section, .values-section {
+    max-width: 1020px;
+    margin: 48px auto;
+    padding: 0 24px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-subtitle {
+    max-width: 580px;
+    margin: 8px auto 0;
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 24px;
+}
+
+.story-block {
+    background: rgba(18, 18, 22, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 32px 26px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.story-block:hover {
+    transform: translateY(-6px);
+    border-color: rgba(211, 16, 16, 0.45);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(211, 16, 16, 0.15);
+}
+
+.story-block.highlight {
+    border-color: rgba(211, 16, 16, 0.35);
+    background: linear-gradient(180deg, rgba(211, 16, 16, 0.08) 0%, rgba(18, 18, 22, 0.9) 100%);
+}
+
+.story-badge {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: #d31010;
+    text-transform: uppercase;
+    background: rgba(211, 16, 16, 0.12);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+}
+
+.story-block h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.story-block p {
+    text-align: left;
+    font-size: 14.5px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Values Grid */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.value-card {
+    background: rgba(25, 25, 30, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 30px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(211, 16, 16, 0.4);
+    background: rgba(30, 30, 38, 0.85);
+}
+
+.value-icon {
+    font-size: 26px;
+    color: #d31010;
+    margin-bottom: 12px;
+}
+
+.value-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.value-card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Quote Banner */
+.quote-banner {
+    max-width: 860px;
+    margin: 50px auto 40px;
+    padding: 36px 28px;
+    text-align: center;
+    border-left: 3px solid #d31010;
+    background: rgba(211, 16, 16, 0.06);
+    border-radius: 0 14px 14px 0;
+}
+
+.quote-banner blockquote {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1.35rem;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin: 0 0 10px;
+    line-height: 1.5;
+}
+
+.quote-banner cite {
+    color: #94a3b8;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ===== Form UI (Bookings & Inquiries) ===== */
+.booking-form form {
+    max-width: 600px;
+    margin: 24px auto 0;
+    text-align: left;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.field-full { 
+    grid-column: 1 / -1; 
+}
+
+.booking-form label {
+    font-weight: 600;
+    color: #f8fafc;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.required { 
+    color: #d31010; 
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background: #0f172a;
+    color: #f8fafc;
+    font-family: 'Inter', Arial, sans-serif;
+    transition: all 0.2s ease;
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+    color: #64748b;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: #d31010;
+    background: #000000;
+    box-shadow: 0 0 0 3px rgba(211, 16, 16, 0.25);
+}
+
+.hint {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 6px;
+}
+
+/* ===== Action Buttons ===== */
+.booking-form button, 
+.location-contact button {
+    padding: 14px 28px;
+    background: #d31010;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.booking-form button:hover, 
+.location-contact button:hover {
+    background-color: #ff1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 16, 16, 0.4);
+}
+
+.location-contact .action-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.btn-link, 
+.location-contact button {
+    display: inline-block;
+    width: auto;
+    min-width: 160px;
+}
+
+.btn-link.secondary, 
+.location-contact .secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #d31010;
+}
+
+.btn-link.secondary:hover, 
+.location-contact .secondary:hover {
+    background: rgba(211, 16, 16, 0.1);
+    color: #ffffff;
+}
+
+/* ===== WhatsApp Quick Lead Floating CTA ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #25d366;
+    color: #ffffff;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.6);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 36px 24px;
+    color: #64748b;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+    background: rgba(5, 5, 8, 0.7);
+}
+
+footer a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #d31010;
+}
+
+/* ===== Responsive Scalability ===== */
+@media (max-width: 840px) {
+    nav {
+        flex-direction: column;
+        gap: 14px;
+        padding: 16px 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    nav button {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .form-grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+        max-width: none;
+    }
+
+    table td { 
+        margin-bottom: 16px; 
+    }
+
+    .services, .reviews, .booking-form, .location-contact {
+        margin: 16px 12px;
+        padding: 24px 18px;
+    }
+
+    .story-grid, .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-section, .values-section {
+        padding: 0 16px;
+    }
+
+    .location-contact .action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-link, .location-contact button {
+        width: 100%;
+    }
+}
