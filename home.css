@@ -179,7 +179,81 @@ nav {
     margin: 24px auto 0;
 }
 
-/* ===== 5. Modern Services Grid ===== */
+/* ===== 5. Brand Partner Infinite Rolling Marquee ===== */
+.partners-marquee-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 10px auto 35px;
+    padding: 15px 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.marquee-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.marquee-track-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 30px;
+    animation: rollingLoop 18s linear infinite;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.partner-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    padding: 8px 24px;
+    min-width: 200px;
+    height: 64px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.partner-item:hover {
+    border-color: var(--primary-red);
+    transform: translateY(-2px);
+}
+
+.partner-item img {
+    max-height: 44px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0.95) contrast(1.05);
+    border-radius: 4px;
+}
+
+@keyframes rollingLoop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 15px));
+    }
+}
+
+/* ===== 6. Modern Services Grid ===== */
 .services, .reviews, .estimator-section {
     margin: 32px auto;
     padding: 40px 30px;
@@ -249,7 +323,7 @@ nav {
     color: var(--primary-red-hover);
 }
 
-/* ===== 6. Dynamic Estimator Box ===== */
+/* ===== 7. Dynamic Estimator Box ===== */
 .estimator-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -309,7 +383,7 @@ nav {
     margin: 4px 0;
 }
 
-/* ===== 7. Reviews & Footer ===== */
+/* ===== 8. Reviews & Footer ===== */
 .reviews-body {
     max-width: 750px;
     margin: 0 auto;
@@ -342,7 +416,7 @@ footer {
     text-decoration: underline;
 }
 
-/* ===== 8. Responsive Breakpoints ===== */
+/* ===== 9. Responsive Breakpoints ===== */
 @media (max-width: 820px) {
     .nav-container {
         flex-direction: column;
