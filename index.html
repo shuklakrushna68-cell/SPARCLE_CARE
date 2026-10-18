@@ -1,56 +1,136 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Home Page</title>     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkle Care | Premium Auto Detailing Studio</title>     
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="home.css">   
 </head>
 <body>
 
-    <NAV>
-        <UL>
-          <img src="logo.jpg" alt="Sparkle Care logo " class="logoheader">
-            <LI><A HREF="index.html">Home</A></LI>
-            <LI><A HREF="about.html">About Us</A></LI>
-            <LI><A HREF="services.html">Services</A></LI>
-            <LI><A HREF="CONTACT.HTML">Contact Us</A></LI>
-        </UL>                 
-         <button ><a href="BOOKING.HTML">Book an Appointment</a></button>
-    </NAV>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.jpg" alt="Sparkle Care Logo" class="logoheader">
+            </a>
 
-    <DIV>
-        <H2 >WELCOME TO </H2>
-        <H1>SPARKLE CARE</H1>
-    </DIV>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="CONTACT.HTML">Contact Us</a></li>
+            </ul>                 
 
-    <div class="services">
-        <h3>SERVICES</h3>
-        <table>
-            <tr>
-            <td>
-                <h3>PPF</h3>
-                <p>Full protection for your car's paint with premium film.<br></p>
-            </td>
-            <td>
-                <h3>CERAMIC COATING</h3>
-                <p>Long-lasting shine and protection against the elements.<br></p>
-            </td>
-            <td>
-                <h3>GRAPHENE COATING</h3>
-                <p>Enhance privacy and reduce glare with our professional tinting services.<br></p>
-            </td>
-        </tr>
-        </table>
-    </div>
-    <div class="reviews">
-     <h3>REVIEWS</h3>
-       <p>We are a leading provider of automotive care services, dedicated to enhancing the appearance and longevity of your vehicle. Our team of experts uses the latest technology and high-quality materials to ensure your car looks its best.</p>
-    </div>
+            <a href="BOOKING.HTML" class="btn-primary">Book an Appointment</a>
+        </div>
+    </nav>
 
- <footer id="contact">
-    <div class="container footer-content">
-      <p><strong>SparkleCare</strong> — making every day brighter.</p>
-      
-      <a href="mailto:hello@sparklecare.example">hello@sparklecare.example</a>
-    </div>
-  </footer>
+    <!-- Hero Section -->
+    <header class="hero">
+        <p class="eyebrow">Precision Auto Detailing</p>
+        <h2>WELCOME TO</h2>
+        <h1>SPARKLE CARE</h1>
+        <p class="subtitle">Elevating vehicle aesthetics with professional paint protection films, ceramic coatings, and precision detailing.</p>
+        <div class="divider"></div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h3>OUR SERVICES</h3>
+        <p class="section-desc">Engineered protection and flawless finishes for high-performance vehicles.</p>
+        
+        <div class="services-grid">
+            <article class="service-card">
+                <span class="badge">Self-Healing</span>
+                <h4>PPF</h4>
+                <p>Full protection for your car's paint against stone chips, scratches, and road debris with optical-clarity TPU film.</p>
+                <a href="services.html" class="service-link">Learn More &rarr;</a>
+            </article>
+
+            <article class="service-card">
+                <span class="badge">9H Protection</span>
+                <h4>CERAMIC COATING</h4>
+                <p>Long-lasting mirror shine, ultra-hydrophobic water sheeting, and defense against chemical etching and UV rays.</p>
+                <a href="services.html" class="service-link">Learn More &rarr;</a>
+            </article>
+
+            <article class="service-card">
+                <span class="badge">Advanced Matrix</span>
+                <h4>GRAPHENE COATING</h4>
+                <p>Superior thermal dispersion, reduced water spotting, and extreme surface slickness engineered for lasting durability.</p>
+                <a href="services.html" class="service-link">Learn More &rarr;</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Dynamic Cost Estimator Widget -->
+    <section class="estimator-section">
+        <h3>QUICK COST ESTIMATOR</h3>
+        <p class="section-desc">Select your vehicle segment and detailing preference for an immediate ballpark estimate.</p>
+        
+        <div class="estimator-box">
+            <div class="estimator-field">
+                <label for="carSegment">Vehicle Type</label>
+                <select id="carSegment">
+                    <option value="1">Hatchback / Compact</option>
+                    <option value="1.2">Mid-Size Sedan</option>
+                    <option value="1.5">Compact SUV / Crossover</option>
+                    <option value="1.8">Full-Size Luxury SUV</option>
+                </select>
+            </div>
+
+            <div class="estimator-field">
+                <label for="packageSelect">Protection Package</label>
+                <select id="packageSelect">
+                    <option value="15000">3-Year Ceramic Coating</option>
+                    <option value="25000">5-Year Graphene Matrix</option>
+                    <option value="65000">Full Body TPU PPF</option>
+                </select>
+            </div>
+
+            <div class="estimator-result">
+                <span class="result-label">Estimated Cost</span>
+                <div class="result-price">₹<span id="calculatedPrice">15,000</span>*</div>
+                <small class="hint">*Final quote subject to paint inspection.</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews / Highlight Section -->
+    <section class="reviews">
+        <h3>WHY CHOOSE US</h3>
+        <p class="reviews-body">We are a leading provider of automotive care services, dedicated to enhancing the appearance and longevity of your vehicle. Our team of certified technicians uses state-of-the-art tools and premium materials to ensure showroom-grade perfection on every panel.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <p><strong>Sparkle Care</strong> — Precision detailing, exceptional care.</p>
+            <a href="mailto:hello@sparklecare.example" class="footer-email">hello@sparklecare.example</a>
+        </div>
+    </footer>
+
+    <!-- Interactive Script for Calculator -->
+    <script>
+        const carSegment = document.getElementById('carSegment');
+        const packageSelect = document.getElementById('packageSelect');
+        const calculatedPrice = document.getElementById('calculatedPrice');
+
+        function updateEstimate() {
+            const multiplier = parseFloat(carSegment.value);
+            const basePrice = parseFloat(packageSelect.value);
+            const finalEstimate = Math.round(multiplier * basePrice);
+            calculatedPrice.textContent = finalEstimate.toLocaleString('en-IN');
+        }
+
+        carSegment.addEventListener('change', updateEstimate);
+        packageSelect.addEventListener('change', updateEstimate);
+    </script>
 </body>
 </html>
